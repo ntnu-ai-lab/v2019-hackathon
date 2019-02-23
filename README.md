@@ -10,6 +10,7 @@ style="display:inline-block; position: relative; transform: translateY(-20%);"><
 #### With BRAIN NTNU, Telenor and Norwegian Open AI Lab
 
 **Time:** 1st of March through 3rd
+
 **Place:** R2, Gløshaugen NTNU, Trondheim
 
 **Timeline:**
