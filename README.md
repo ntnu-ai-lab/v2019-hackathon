@@ -1,5 +1,12 @@
 # AI Hackathon
-<img src="https://i.imgur.com/w11MC1p.png" width="150" ></img>
+
+<img src="https://i.imgur.com/w11MC1p.png" height="50" 
+style="display:inline-block;"></img>
+<img src="https://i.imgur.com/rpFBAmZ.png" height="50" 
+style="transform: translateY(-30%); margin: 0px 20px;"></img>
+<img src="https://i.imgur.com/oSZhtAW.jpg" height="50" 
+style="display:inline-block; position: relative; transform: translateY(-20%);"></img>
+
 #### With BRAIN NTNU, Telenor and Norwegian Open AI Lab
 
 
@@ -47,20 +54,27 @@ Telenor is the second biggest IoT provider in Europe with more than 10 millions 
 
 Since we are all sharing NTNUs HPC we have to distribute the processing power amongst all teams. You do this by setting the fraction of GPU memory to be allocated when construct a `tf.Session` (if using Tensorflow, otherwise consult with one of the advisors) by passing a `tf.GPUOptions` as part of the optional `config` argument:
 
-```
-# Assuming there are at most 25 teams, 12.5 at each GPU, use 8% of the allocated GPU. 
+```python
+# We are starting the event, with 50% of the GPU to each team
 
-gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.08)
+gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.5)
 session = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
 ```
+
+To check how occupied your allocated GPU is, use `watch nvidia-smi`. 
+If the GPUs are too occupied we will find a solution so that each team get to train their network.
 
 
 ##### Docker
 Docker is installed on the HPC, and will be used during the event. On this <a href="">link</a> you can fin NTNUs Docker guide. For more documentation see <a href="https://docs.docker.com/">https://docs.docker.com/</a>. Advisors from the AI Lab and Telenor will be guiding you, if needed. Please use `Dockerfile` in this repository as a template.  
 
-##### Relevant tutorials
+##### Connecting to the server
 
-###### *TBD*
+Use the command below with your assigned user and password to connect to the server:
+
+```bash
+$ ssh <user>@<anakin-machine>.idi.ntnu.no
+```
 
 ##### Relevant tutorials
 
@@ -69,7 +83,7 @@ Docker is installed on the HPC, and will be used during the event. On this <a hr
 #### Files of interest
 
 * `Dockerfile`
-* *TBD*
+* *More TBD*
 
 
 #### Categories for evaluation
@@ -79,7 +93,7 @@ Docker is installed on the HPC, and will be used during the event. On this <a hr
 
 
 #### Computational power
-For processing we are using NTNUs new HPC; *anakin02*:
+For processing we are using NTNUs new HPCs; *anakin01 and anakin02*:
 
 * *GPU*: 2x NVIDIA Tesla V100 32GB
 * *CPU*: 2x Intel Xeon Gold 6132 2.6G, 14C/28T, 10.4GT/s 2UPI
@@ -87,7 +101,8 @@ For processing we are using NTNUs new HPC; *anakin02*:
 
 
 ### Jury
-* Massimiliano Ruocco
+
 * Kerstin Bach
+* Massimiliano Ruocco
 * Hai Thanh Nguyen
 * Arjun Chandra
