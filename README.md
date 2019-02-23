@@ -41,11 +41,11 @@ Telenor is the second biggest IoT provider in Europe with more than 10 millions 
 </a>
 
 
-#### Preliminaries
+### Preliminaries
 
-##### Sharing computational - MANDATORY FOR ALL TEAMS
+##### Sharing computational power - MANDATORY FOR ALL TEAMS
 
-Since we are all sharing NTNUs HPC we have to distribute the processing power amongst all teams. You do this by setting the fraction of GPU memory to be allocated when construct a `tf.Session` (if you use Tensorflow, otherwise consult with advisors) by passing a `tf.GPUOptions` as part of the optional `config` argument:
+Since we are all sharing NTNUs HPC we have to distribute the processing power amongst all teams. You do this by setting the fraction of GPU memory to be allocated when construct a `tf.Session` (if using Tensorflow, otherwise consult with one of the advisors) by passing a `tf.GPUOptions` as part of the optional `config` argument:
 
 ```
 # Assuming there are at most 25 teams, 12.5 at each GPU, use 8% of the allocated GPU. 
@@ -58,15 +58,18 @@ session = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
 ##### Docker
 Docker is installed on the HPC, and will be used during the event. On this <a href="">link</a> you can fin NTNUs Docker guide. For more documentation see <a href="https://docs.docker.com/">https://docs.docker.com/</a>. Advisors from the AI Lab and Telenor will be guiding you, if needed. Please use `Dockerfile` in this repository as a template.  
 
+##### Relevant tutorials
+
+###### *TBD*
 
 ##### Relevant tutorials
 
 ###### *TBD*
 
-
 #### Files of interest
 
-###### *TBD*
+* `Dockerfile`
+* *TBD*
 
 
 #### Categories for evaluation
