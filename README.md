@@ -1,6 +1,7 @@
 # AI Hackathon
-
+<img src="https://i.imgur.com/w11MC1p.png" width="150" ></img>
 #### With BRAIN NTNU, Telenor and Norwegian Open AI Lab
+
 
 **Place:** R2, Gløshaugen NTNU, Trondheim
 
@@ -42,7 +43,31 @@ Telenor is the second biggest IoT provider in Europe with more than 10 millions 
 
 #### Preliminaries
 
-**TBD**
+##### Sharing computational - MANDATORY FOR ALL TEAMS
+
+Since we are all sharing NTNUs HPC we have to distribute the processing power amongst all teams. You do this by setting the fraction of GPU memory to be allocated when construct a `tf.Session` (if you use Tensorflow, otherwise consult with advisors) by passing a `tf.GPUOptions` as part of the optional `config` argument:
+
+```
+# Assuming there are at most 25 teams, 12.5 at each GPU, use 8% of the allocated GPU. 
+
+gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.08)
+session = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+```
+
+
+##### Docker
+Docker is installed on the HPC, and will be used during the event. On this <a href="">link</a> you can fin NTNUs Docker guide. For more documentation see <a href="https://docs.docker.com/">https://docs.docker.com/</a>. Advisors from the AI Lab and Telenor will be guiding you, if needed. Please use `Dockerfile` in this repository as a template.  
+
+
+##### Relevant tutorials
+
+###### *TBD*
+
+
+#### Files of interest
+
+###### *TBD*
+
 
 #### Categories for evaluation
 
@@ -50,6 +75,12 @@ Telenor is the second biggest IoT provider in Europe with more than 10 millions 
 * **Best use of AI on the data (method/application)**
 
 
+#### Computational power
+For processing we are using NTNUs new HPC; *anakin02*:
+
+* *GPU*: 2x NVIDIA Tesla V100 32GB
+* *CPU*: 2x Intel Xeon Gold 6132 2.6G, 14C/28T, 10.4GT/s 2UPI
+* *RAM*: 24x 32GB = 768GB
 
 
 ### Jury
