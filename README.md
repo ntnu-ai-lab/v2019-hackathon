@@ -67,7 +67,7 @@ If the GPUs are too occupied we will find a solution so that each team get to tr
 
 
 ##### Docker
-Docker is installed on the HPC, and will be used during the event. On this <a href="">link</a> you can fin NTNUs Docker guide. For more documentation see <a href="https://docs.docker.com/">https://docs.docker.com/</a>. Advisors from the AI Lab and Telenor will be guiding you, if needed. Please use `Dockerfile` in this repository as a template.  
+Docker is installed on the HPC, and will be used during the event. On this <a href="https://www.ntnu.no/wiki/display/ailab/Getting+started+with+Docker">link</a> you can fin NTNUs Docker guide. For more documentation see <a href="https://docs.docker.com/">https://docs.docker.com/</a>. Advisors from the AI Lab and Telenor will be guiding you, if needed. Please use `Dockerfile` in this repository as a template.  
 
 ##### Connecting to the server
 
