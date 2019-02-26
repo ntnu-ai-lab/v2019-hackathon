@@ -7,12 +7,7 @@ from datetime import datetime
 
 
 def format_url(api, station, component, year, month):
-    return api + "/obs/historical/{}/{}/{}?component={}".format(
-        "{}-{}-01".format(year, month),
-        "{}-{}-01".format(year, month + 1),
-        station,
-        component,
-    )
+    return f'{api}/obs/historical/{year}-{month}-01/{year}{month+1}-01/{station}?component={component}'
 
 
 def download_to_json(urls: str) -> dict:
@@ -42,7 +37,7 @@ def download_nilu_historical_data(args):
         result = {
             key: value
             for key, value in results[0][0].items()
-            if not key in ["component", "values"]
+            if key not in ["component", "values"]
         }
         air_data = {component: [] for component in components.split(",")}
         for r in results:
