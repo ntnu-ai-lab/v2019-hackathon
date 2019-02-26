@@ -48,6 +48,44 @@ Telenor is the second biggest IoT provider in Europe with more than 10 millions 
 > * <a href="https://chemicalwatch.com/66144/norway-investigating-solutions-for-tackling-road-dust-microplastics">Norway investigating solutions for tackling road dust microplastics
 </a>
 
+### Datasets
+
+#### Dataset 1: NILU (2014 - 2019)
+
+**Name:** `NILU_Dataset_Trondheim_2014-2019.csv`
+
+**Table-structure:**
+
+|                     | Bakke kirke | Bakke kirke | Bakke kirke | Bakke kirke | Bakke kirke | E6-Tiller | ... |
+|:---------------------:|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|:-----------:|:-----:|
+| timestamp           | NO          | NO2         | NOx         | PM10        | PM2.5       | NO        | ... |
+| 2013-12-31 23:00:00 | 8.940542    | 31.059213   | 44.720362   | 208.45      | 155.4       | 6.907422  | ... |
+
+#### Dataset 2: YR Weather Statistics (2014 - 2019)
+
+**Name:** `YR_Dataset_Trondheim_2014_2019.json`
+
+See <a href="https://www.yr.no/place/Norway/Tr%C3%B8ndelag/Trondheim/Trondheim//almanakk.html?dato=2019-02-25">this</a> for an example of data in table
+
+**Format:**
+
+```javascript
+[
+  {<date>: [{
+	 [{'temperature': {
+	   'measured': <measured_temperature>, 
+	   'max': <max_temperature>, 
+	   'min': <min_temperature>}, 
+	   'timestamp': <timestamp>, 
+	   'precipitation': <precipitation>, 
+	   'humidity': <humidity>},
+    },...]
+  },...
+]
+```
+
+To parse the datasets you can use for example <a href=""><i>pandas</i></a>
+
 
 ### Preliminaries
 
@@ -65,6 +103,14 @@ session = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
 To check how occupied your allocated GPU is, use `watch nvidia-smi`. 
 If the GPUs are too occupied we will find a solution so that each team get to train their network.
 
+##### Downloading the datasets
+
+For downloading the datasets from your assigned anakin to your computer, please type the command below on you *local machine*.
+
+```bash
+$ scp -r <user>@<anakin-machine>.idi.ntnu.no:/work/hackathon/datasets <dataset-destination file>/
+```
+
 
 ##### Docker
 Docker is installed on the HPC, and will be used during the event. On this <a href="https://www.ntnu.no/wiki/display/ailab/Getting+started+with+Docker">link</a> you can fin NTNUs Docker guide. For more documentation see <a href="https://docs.docker.com/">https://docs.docker.com/</a>. Advisors from the AI Lab and Telenor will be guiding you, if needed. Please use `Dockerfile` in this repository as a template.  
@@ -77,14 +123,12 @@ Use the command below with your assigned user and password to connect to the ser
 $ ssh <user>@<anakin-machine>.idi.ntnu.no
 ```
 
-##### Relevant tutorials
-
-###### *TBD*
-
 #### Files of interest
 
 * `Dockerfile`
-* *More TBD*
+* `datasets/`
+* `nilu_data.py`
+* `yr_data.py`
 
 
 #### Categories for evaluation
