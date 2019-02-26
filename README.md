@@ -123,6 +123,12 @@ Use the command below with your assigned user and password to connect to the ser
 $ ssh <user>@<anakin-machine>.idi.ntnu.no
 ```
 
+##### Home directory at server
+
+Your home directory where you can keep your files are located at `cd ~`.
+
+
+
 #### Files of interest
 
 * `Dockerfile`
