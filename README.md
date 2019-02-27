@@ -117,7 +117,7 @@ Docker is installed on the HPC, and will be used during the event. On this <a hr
 
 We have created an example image from the Dockerfile in this repo, uploaded to both servers. You are welcome to use this to build your group's Docker container. To do this you can for example use this:
 
-````bash
+```bash
 $ nvidia-docker run -dit --name grXX henrikhoiness/hackathon
 ```
 
