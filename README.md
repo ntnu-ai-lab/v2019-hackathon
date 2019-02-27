@@ -89,6 +89,23 @@ To parse the datasets you can use for example <a href="https://pandas.pydata.org
 
 ### Preliminaries
 
+##### Docker
+
+**IMPORTANT:**
+
+**We do know that Docker provides root-access. In spite of this, we trust you to behave appropriately. Any violation or misuse, such as touching other teams' containers and files or cryptomining, will lead to disqualification and expulsion from the AI Lab's processing sources.**
+
+Docker is installed on the HPC, and will be used during the event. On this <a href="https://www.ntnu.no/wiki/display/ailab/Getting+started+with+Docker">link</a> you can fin NTNUs Docker guide. For more documentation see <a href="https://docs.docker.com/">https://docs.docker.com/</a>. Advisors from the AI Lab and Telenor will be guiding you, if needed. Please use `Dockerfile` in this repository as a template.  
+
+We have created an example image from the Dockerfile in this repo, uploaded to both servers. You are welcome to use this to build your group's Docker container. To do this you can for example use this:
+
+```bash
+$ nvidia-docker run -dit --name grXX henrikhoiness/hackathon
+```
+
+, where XX is your groupname. 
+
+
 ##### Sharing computational power - MANDATORY FOR ALL TEAMS
 
 Since we are all sharing NTNUs HPC we have to distribute the processing power amongst all teams. You do this by setting the fraction of GPU memory to be allocated when construct a `tf.Session` (if using Tensorflow, otherwise consult with one of the advisors) by passing a `tf.GPUOptions` as part of the optional `config` argument:
@@ -111,17 +128,6 @@ For downloading the datasets from your assigned anakin to your computer, please 
 $ scp -r <user>@<anakin-machine>.idi.ntnu.no:/work/hackathon/datasets <dataset-destination file>/
 ```
 
-
-##### Docker
-Docker is installed on the HPC, and will be used during the event. On this <a href="https://www.ntnu.no/wiki/display/ailab/Getting+started+with+Docker">link</a> you can fin NTNUs Docker guide. For more documentation see <a href="https://docs.docker.com/">https://docs.docker.com/</a>. Advisors from the AI Lab and Telenor will be guiding you, if needed. Please use `Dockerfile` in this repository as a template.  
-
-We have created an example image from the Dockerfile in this repo, uploaded to both servers. You are welcome to use this to build your group's Docker container. To do this you can for example use this:
-
-```bash
-$ nvidia-docker run -dit --name grXX henrikhoiness/hackathon
-```
-
-, where XX is your groupname. 
 
 ##### Connecting to the server
 
@@ -152,7 +158,7 @@ Your home directory where you can keep your files are located at `cd ~`.
 
 
 #### Computational power
-For processing we are using NTNUs new HPCs; *anakin01 and anakin02*:
+For processing we are using IDIs new GPU-nodes; *anakin01 and anakin02*:
 
 * *GPU*: 2x NVIDIA Tesla V100 32GB
 * *CPU*: 2x Intel Xeon Gold 6132 2.6G, 14C/28T, 10.4GT/s 2UPI
