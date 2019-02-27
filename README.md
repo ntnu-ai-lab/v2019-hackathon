@@ -115,6 +115,14 @@ $ scp -r <user>@<anakin-machine>.idi.ntnu.no:/work/hackathon/datasets <dataset-d
 ##### Docker
 Docker is installed on the HPC, and will be used during the event. On this <a href="https://www.ntnu.no/wiki/display/ailab/Getting+started+with+Docker">link</a> you can fin NTNUs Docker guide. For more documentation see <a href="https://docs.docker.com/">https://docs.docker.com/</a>. Advisors from the AI Lab and Telenor will be guiding you, if needed. Please use `Dockerfile` in this repository as a template.  
 
+We have created an example image from the Dockerfile in this repo, uploaded to both servers. You are welcome to use this to build your group's Docker container. To do this you can for example use this:
+
+````bash
+$ nvidia-docker run -dit --name grXX henrikhoiness/hackathon
+```
+
+, where XX is your groupname. 
+
 ##### Connecting to the server
 
 Use the command below with your assigned user and password to connect to the server:
