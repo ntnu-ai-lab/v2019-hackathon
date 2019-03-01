@@ -1,4 +1,4 @@
-timestamp ,longitude ,latitude ,altitude ,RH ,Temperature ,iAQ-Core status ,CO2 ppm ,TVOC ppb ,PM 2.5 (ug/m3) ,PM 10 (ug/m3) 
+timestamp,longitude,latitude,altitude,RH,Temperature,iAQ-Core status,CO2 ppm,TVOC ppb,PM 2.5 (ug/m3),PM 10 (ug/m3)
 2019-01-07 14:09:13,0.0,0.0,0.0,20.904541000000002,22.015991,16,0,0,1,2
 2019-01-09 15:30:38,0.0,0.0,0.0,35.839844,7.826233,16,0,0,5,6
 2019-01-09 15:31:53,10.43820240747285,63.42155777972352,133.600006,53.314209,3.858337,16,0,0,2,3
