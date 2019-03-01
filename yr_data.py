@@ -1,3 +1,4 @@
+import json
 import multiprocessing as mp
 import datetime
 from datetime import timedelta
@@ -115,7 +116,7 @@ def main():
     all_measurements = retrieve_all_measurements(start_date, end_date, location)
 
     with open("YR_Dataset_Trondheim_2014_2019.json", "w") as f:
-        f.write(str(all_measurements))
+        f.write(json.dumps(all_measurements))
 
 
 if __name__ == '__main__':
