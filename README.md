@@ -168,6 +168,8 @@ For processing we are using IDIs new GPU-nodes; *anakin01 and anakin02*:
 ### Jury
 
 * Kerstin Bach
+* Kenth Engø-Monsen
+* Sigmund Akselsen
 * Massimiliano Ruocco
 * Hai Thanh Nguyen
 * Arjun Chandra
