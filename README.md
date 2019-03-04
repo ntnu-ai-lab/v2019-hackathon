@@ -170,6 +170,7 @@ For processing we are using IDIs new GPU-nodes; *anakin01 and anakin02*:
 * Kerstin Bach
 * Kenth Engø-Monsen
 * Sigmund Akselsen
+* Espen Sande Larsen
 * Massimiliano Ruocco
 * Hai Thanh Nguyen
 * Arjun Chandra
